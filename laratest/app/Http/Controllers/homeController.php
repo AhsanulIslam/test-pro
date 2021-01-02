@@ -42,10 +42,10 @@ class homeController extends Controller
     public function info(Request $req){
     $username=$req->session()->get('username');
     //echo($username);  
-    $students = User::where('username',$username)->first();
+    $adinfo = User::where('username',$username)->first();
   // $students =User::find(1);    
    // print_r($students); //                    cannot get the array or the row of the admin who is logged in 
-   return view('home.ad_info_edit',$students);
+   return view('home.ad_info_edit',$adinfo);
     }
 
 
