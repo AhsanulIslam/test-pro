@@ -20,14 +20,18 @@ class homeController extends Controller
     public function index(Request $req){
         return view('home.index', ['username'=> $req->session()->get('username')]);
     }
-
+  
+    public function countbuyer(){
+        $results = DB::select('select COUNT(*) as t_c FROM buyer');
+        return view('home.index')->with('t_c', $results);
+    }
 
     public function inbox(Request $req){
     	$username=$req->session()->get('username');
         $results = DB::select('select * from chat where username != ? group by username order by date desc', [$username]);
        // $results= array($results);
         // print_r($results);
-       // $students = chat::all();
+       // $inboxtxt = chat::all();
     	return view('home.ad_inbox')->with('inboxtxt', $results);
     }
 
@@ -43,8 +47,8 @@ class homeController extends Controller
     $username=$req->session()->get('username');
     //echo($username);  
     $adinfo = User::where('username',$username)->first();
-  // $students =User::find(1);    
-   // print_r($students); //                    cannot get the array or the row of the admin who is logged in 
+  // $adinfo =User::find(1);    
+   // print_r($adinfo); //                    cannot get the array or the row of the admin who is logged in 
    return view('home.ad_info_edit',$adinfo);
     }
 

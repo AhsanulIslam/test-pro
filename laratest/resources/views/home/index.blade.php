@@ -3,19 +3,9 @@
 
 	<h1 align="center">Welcome Home - {{$username}}</h1>
 	<br>
-	<!-- <h3>need to add job lists here</h3> -->
-{{-- 	
-		<!-- <a href="/user/create">Create New User</a> |
-		<a href="/home/userlist">User list</a> |
-		<a href="/logout">logout</a> -->
-	<!-- <form>
-		<input type="text" name="searchkey" placeholder="search">
-		<input type="button" name="search" value="Search" >
-	</form> --}}
 
-{{-- <!--dashboard starts --> --}}
 <div align="center">
-	<table  align="center">
+	<table">
 		<tr>
 			<td>
 				<div class="card">
@@ -28,7 +18,7 @@
 			<td>
 				<div class="card">
 				<span class="text-white"> Total buyers <br>
-					{{-- <%= bc[0].t_c %> --}}
+				 	{{count($t_c)}}
 				</span>
 				</div>
 			</td>
