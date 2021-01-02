@@ -73,7 +73,6 @@ class homeController extends Controller
         else{
             echo("error buyer not inserted to database");}
 
-      
     }
     
 

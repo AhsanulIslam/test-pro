@@ -38,7 +38,7 @@
             </ul>
           </div>
     </li>
-	 <li><a href="{{route('home.joblist')}}">job lists</a></li>
+	 <li><a href="{{route('home.free_joblist')}}">job lists</a></li>
 	<div class="sub-menu-1">
   	<ul>
            <!-- <li><a href="/">Inbo//  -->
