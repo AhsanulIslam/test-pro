@@ -1,5 +1,5 @@
 
-@include('home.admin_header');
+@include('home.free_header');
 
 	<h1 align="center">Welcome Home - {{$username}}</h1>
 	<br>
