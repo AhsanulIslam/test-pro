@@ -19,27 +19,27 @@ class homeController extends Controller
 
     public function index(Request $req){
         return view('home.index', ['username'=> $req->session()->get('username')]);
-    	
     }
+
+
     public function inbox(Request $req){
     	$username=$req->session()->get('username');
         $results = DB::select('select * from chat where username != ? group by username order by date desc', [$username]);
        // $results= array($results);
         // print_r($results);
        // $students = chat::all();
-      
     	return view('home.ad_inbox')->with('inboxtxt', $results);
     }
 
-    public function adminlist(){
-    	
 
-        $students = User::all();
-    	return view('home.adminlist')->with('students', $students);
+    public function adminlist(){
+        $adminlist = User::all();
+    	return view('home.adminlist')->with('adminlists', $adminlist);
     }
 
+
+
     public function info(Request $req){
-    	
     $username=$req->session()->get('username');
     //echo($username);  
     $students = User::where('username',$username)->first();
@@ -48,26 +48,24 @@ class homeController extends Controller
    return view('home.ad_info_edit',$students);
     }
 
+
+
     public function adupdate( ad_editRequest $req){
-    	   
         $username=$req->session()->get('username');
         //echo($username);  
         $user = User::where('username',$username)->first();
-
             $user->fname      = $req->name;
             $user->username  = $req->username;
             $user->password  = $req->password;
             $user->email     = $req->email;
             $user->phone     = $req->phone;
            $user->address    = $req->address;
-
         $user->save();
-
     	return redirect()->route('home.admininfo');
     }
 
+
     public function delete($id){
-        
         $user = User::find($id);
         $user->delete();
     	return redirect()->route('home.adminlist');
