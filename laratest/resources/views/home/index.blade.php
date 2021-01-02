@@ -1,7 +1,7 @@
 
 @include('home.admin_header');
 
-	<h1>This is admin home page </h1>
+	<h1 align="center">This is admin home page </h1>
 	<!-- <h3>need to add job lists here</h3> -->
 {{-- 	
 		<!-- <a href="/user/create">Create New User</a> |
@@ -13,7 +13,7 @@
 	</form> --}}
 
 {{-- <!--dashboard starts --> --}}
-<div>
+<div align="center">
 	<table  align="center">
 		<tr>
 			<td>
