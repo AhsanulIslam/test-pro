@@ -28,7 +28,7 @@ class homeController extends Controller
         // print_r($results);
        // $students = chat::all();
       
-    	return view('home.ad_inbox')->with('students', $results);
+    	return view('home.ad_inbox')->with('inboxtxt', $results);
     }
 
     public function adminlist(){
