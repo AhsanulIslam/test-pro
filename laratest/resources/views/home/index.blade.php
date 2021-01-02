@@ -18,7 +18,7 @@
 			<td>
 				<div class="card">
 				<span class="text-white"> Total buyers <br>
-				 	{{count($t_c)}}
+				 	
 				</span>
 				</div>
 			</td>

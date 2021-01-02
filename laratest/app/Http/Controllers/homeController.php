@@ -22,8 +22,9 @@ class homeController extends Controller
     }
   
     public function countbuyer(){
-        $results = DB::select('select COUNT(*) as t_c FROM buyer');
-        return view('home.index')->with('t_c', $results);
+        $results = DB::select('select COUNT(*) FROM buyer');
+        print_r($results);
+      //  return view('home.index')->with('t_c', $results);
     }
 
     public function inbox(Request $req){
