@@ -34,7 +34,9 @@
 
     <div class="center">
         <form method="post"  action="" enctype="" class="form-horizontal form-material">
+
     <div class="form-group">
+    @csrf
         <!-- <h4 class="text">Username:</h4>  -->
         
         <input type="text"  placeholder="Message" name="message" id="mes" class="form-control" size="50">
