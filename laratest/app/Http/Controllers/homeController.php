@@ -12,28 +12,73 @@ use App\freelancer;// accessing model for user table
 use  App\buyer;
 use  App\joblist;
 use  App\chat;
-
+// use App\Flight
 
 class homeController extends Controller
 {
 
     public function index(Request $req){
-        return view('home.index', ['username'=> $req->session()->get('username')]);
+
+        $count = buyer::all()->count();
+        $count2 = freelancer::all()->count();
+        $count3 = joblist::all()->count();
+
+    //    print_r($count);
+        // echo($count);
+        return view('home.index', ['username'=> $req->session()->get('username')])->with ('countb',$count)->with ('countfree',$count2)->with ('countjob',$count3);
     }
   
-    public function countbuyer(){
-        $results = DB::select('select COUNT(*) FROM buyer');
-        print_r($results);
-      //  return view('home.index')->with('t_c', $results);
-    }
 
     public function inbox(Request $req){
     	$username=$req->session()->get('username');
-        $results = DB::select('select * from chat where username != ? group by username order by date desc', [$username]);
+        $results = DB::select('select * from chat where username != ? && Admin_Username = ? group by username order by date desc', [$username,$username]);
        // $results= array($results);
         // print_r($results);
        // $inboxtxt = chat::all();
     	return view('home.ad_inbox')->with('inboxtxt', $results);
+    }
+
+
+    public function reply(Request $req, $uname){
+        $username=$req->session()->get('username');
+        
+        $results = DB::select('select * from chat where username = ? && Admin_Username = ?',[$uname, $username]);
+ 
+    	return view('home.ad_inbox_inside')->with('replytxt', $results);
+    }
+
+
+    public function replysend(Request $req, $uname){
+
+        $mytime = Carbon\Carbon::now();
+        $d = $mytime->toDateTimeString();
+
+        $username=$req->session()->get('username');
+     
+        $chat = new chat();
+
+        $chat->message     = $req->message;
+        $chat->date  = $d;
+        $chat->chat_username  = $uname;
+        $chat->admin_username  = $username;
+        $chat->reply  = $username;
+
+      
+        if($chat->save()){               // inserts in to the database using the save() method
+        return redirect()->route('home.reply');
+        }
+        else{
+            echo("error buyer not inserted to database");}
+
+      
+    }
+    
+
+
+    public function idelete($id){
+        $chat = chat::find($id);
+        $chat->delete();
+    	return redirect()->route('home.ad_inbox');
     }
 
 

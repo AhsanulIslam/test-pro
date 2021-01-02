@@ -10,7 +10,7 @@
 			<td>
 				<div class="card">
 				<span class="text-white"> Total jobs available <br>
-					{{-- <%= userlist[0].t_c %> --}}
+					{{$countjob}}
 					
 				</span>
 				</div>
@@ -18,14 +18,14 @@
 			<td>
 				<div class="card">
 				<span class="text-white"> Total buyers <br>
-				 	
+				 	{{$countb}}
 				</span>
 				</div>
 			</td>
 			<td>
 				<div class="card">
 				<span class="text-white"> Total freelancer <br>
-					{{-- <%= fc[0].t_c %> --}}
+					{{$countfree}}
 				</span>
 				</div>
 			</td>
