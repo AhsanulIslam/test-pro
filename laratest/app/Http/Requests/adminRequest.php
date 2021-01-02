@@ -24,8 +24,10 @@ class adminRequest extends FormRequest
     public function rules()
     {
         return [
+            'username' => 'required|min:3|unique:admins',
             'username' => 'required|min:3|unique:freelancer',
-            'password' => 'required',
+            'username' => 'required|min:3|unique:buyer',
+            'password' => 'required|same:pass2',
             'name' => 'required',
             'email' => 'required|email:rfc',
             'phone' => 'required|digits:11|starts_with:01' , // to check if the value is within 11 numbers
@@ -43,6 +45,7 @@ class adminRequest extends FormRequest
             'username.min'=> "username minimum 3 characters....",
             'username.unique'=> "username already taken, change you username....",
             'password.required'=> "password can't be left empty....",
+            'password.same'=> "password did not match....",
             'name.required'=> "name can't be left empty....",
             'email.required'=> "email can't be left empty....",
             'email.email'=> "email incorrect.",
