@@ -15,7 +15,7 @@ use  App\chat;
 use Carbon\Carbon;
 // use App\Flight
 
-class homeController extends Controller
+class free_homeController extends Controller
 {
 
     public function index(Request $req){
