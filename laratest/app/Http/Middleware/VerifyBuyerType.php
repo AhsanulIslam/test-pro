@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class VerifyUserType
+class VerifyBuyerType
 {
     /**
      * Handle an incoming request.
@@ -16,10 +16,10 @@ class VerifyUserType
     public function handle($request, Closure $next)
     {
 
-        if($request->session()->get('type') == 'admin'){
+        if($request->session()->get('type') == 'buyer'){
             return $next($request);
         }else{
-            return redirect()->route('home.index');
+            return redirect()->route('buyer_home.index');
         }
     }
 }
