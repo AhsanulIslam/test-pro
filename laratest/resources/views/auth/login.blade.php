@@ -48,7 +48,10 @@
                                         {{ __('Remember Me') }}
 
                                     </label>
-                                    <label><a class="btn btn-info" href="/login/github">Login with github</a></label>
+                                    <label><a class="btn btn-info" href="/login/github">Signup with github</a></label> 
+                                    <br>
+                                    <br>
+                                    <label>  <p>hwlllllllllllllllllllllllllllllllllll</p>{{status}}</label> 
                                 </div>
                             </div>
                         </div>
