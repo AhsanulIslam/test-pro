@@ -61,7 +61,7 @@ class registerController extends Controller
               // $user->member    = $req->member;
               //  $user->profile_img  = $file->getClientOriginalName();
                 if($user->save()){               // inserts in to the database using the save() method
-                    return redirect('/loginindex');
+                    return redirect('/login');
                 }
                 else{
                     echo("error freelancer not inserted to database");}

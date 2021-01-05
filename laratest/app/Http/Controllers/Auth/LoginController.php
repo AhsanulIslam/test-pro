@@ -30,7 +30,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '';
 
     /**
      * Create a new controller instance.
@@ -63,10 +63,10 @@ class LoginController extends Controller
         $data ->username = $user->nickname;
         $data ->fname = $user->name;
         $data ->email = $user->email;
-        $data ->password= bcrypt('123');
+        $data ->password= '123';
         $data->save();
  
-        return redirect('/loginindex')->with('status', 'Successfully sign Up!');
+        return redirect('/login');
     }
 
     

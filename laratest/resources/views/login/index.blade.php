@@ -43,12 +43,10 @@
 			 <input type="submit" class="btn btn1" name ="submit" value="Log in">
 			 <br>
 			 <br>
+
 			 <label><a class="btn btn3" href="/login/github" >Signup with github</a></label>
-			 <label>  <p>hwlllllllllllllllllllllllllllllllllll</p>{{status}}</label> 
-
-
-		 </div>
 		 
+		 </div>
 		 <div style="color: red">{{session('msg')}} </div>
 		
 		

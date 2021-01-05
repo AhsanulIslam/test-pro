@@ -209,20 +209,6 @@ width:auto;
   color: #000000;
   border-radius: 24px;
 }
-.btn3
-{ background: rgb(0, 0, 0);
-  border:0;
-  color:rgb(255, 255, 255);
-width:auto;
-text-decoration: none;
-
-}
-.btn3:hover
-{
-  background: rgb(255, 255, 255);
-  color: #000000;
-  border-radius: 24px;
-}
 
 .btn1
 { color: rgb(0, 0, 0);
@@ -238,7 +224,20 @@ text-decoration: none;
   transform: scale(1.05);
 
 }
+.btn3
+{ background: rgb(0, 0, 0);
+  border:0;
+  color:rgb(255, 255, 255);
+width:auto;
+text-decoration: none;
 
+}
+.btn3:hover
+{
+  background: rgb(255, 255, 255);
+  color: #000000;
+  border-radius: 24px;
+}
 /* ---------------for button animation------------------- */
 .btn::before
 {
