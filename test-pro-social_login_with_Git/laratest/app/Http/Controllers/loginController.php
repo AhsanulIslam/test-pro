@@ -6,16 +6,11 @@ use Illuminate\Support\Facades\DB;
 use App\User;// accessing model for user table 
 use App\freelancer;// accessing model for user table 
 use  App\buyer;
-use Laravel\Socialite\Facades\Socialite;
 class loginController extends Controller
 {
     public function index(){
     	return view('login.index');
     }
-
-
- 
-
 
     public function verify(Request $req){
 
