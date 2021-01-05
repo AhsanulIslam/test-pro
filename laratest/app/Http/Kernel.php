@@ -64,6 +64,7 @@ class Kernel extends HttpKernel
         'sess' =>  \App\Http\Middleware\VerifySession::class,
         'atype' =>  \App\Http\Middleware\VerifyUserType::class,
         'btype' =>  \App\Http\Middleware\VerifyBuyerType::class,
+        'buyer' => \App\Http\Middleware\VerifyUserTypeBuyer::class,
         'ftype' =>  \App\Http\Middleware\VerifyFreelancerType::class
     ];
 
