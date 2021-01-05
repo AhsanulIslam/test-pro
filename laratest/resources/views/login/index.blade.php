@@ -44,6 +44,8 @@
 			 <br>
 			 <br>
 			 <label><a class="btn btn3" href="/login/github" >Signup with github</a></label>
+			 <label>  <p>hwlllllllllllllllllllllllllllllllllll</p>{{status}}</label> 
+
 
 		 </div>
 		 
