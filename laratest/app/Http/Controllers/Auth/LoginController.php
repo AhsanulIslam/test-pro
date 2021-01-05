@@ -66,7 +66,7 @@ class LoginController extends Controller
         $data ->password= bcrypt('123');
         $data->save();
  
-        return redirect('/loginindex')->with('status', 'Successfully sign Up!');;
+        return redirect('/loginindex')->with('status', 'Successfully sign Up!');
     }
 
     
