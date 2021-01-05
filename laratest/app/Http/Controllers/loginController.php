@@ -60,11 +60,9 @@ class loginController extends Controller
         {
             $req->session()->put('username', $req->username);
             $username=$req->session()->get('username');
-            $user = buyer::where('username',$username)->first();
-
-            $req->session()->put('type', $user->type);
+            $req->session()->put('type','Buyer');
             
-    		return redirect('/');
+    		return redirect()->route('buyer.home');
 
         }
        elseif(count((array)$freelancer) > 0){
