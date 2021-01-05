@@ -17,11 +17,11 @@ use Carbon\Carbon;
  
 //get status code using $response->getStatusCode();
  
-$body = $response->getBody();
-$arr_body = json_decode($body);
-print_r($arr_body);
+// $body = $response->getBody();
+// $arr_body = json_decode($body);
+// print_r($arr_body);
 // use App\Flight
-use GuzzleHttp\Client;
+// use GuzzleHttp\Client;
 
 class free_homeController extends Controller
 {
