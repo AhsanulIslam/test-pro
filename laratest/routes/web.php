@@ -16,7 +16,7 @@ Route::get('/', function(){
 });
 
 
-Route::get('/login', 'loginController@index')->name ('login');
+Route::get('/loginindex', 'loginController@index')->name ('login');
 Route::post('/login', 'loginController@verify');
 Route::get('/logout', 'logoutController@index');
 Route::get('/register', 'registerController@index');
@@ -87,3 +87,11 @@ Route::group(['middleware'=>['sess']], function(){
 //Route::resource('/product', 'ProductController');
 Route::resource('/student', 'StudentController');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback');
