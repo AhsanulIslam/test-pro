@@ -179,8 +179,9 @@ class homeController extends Controller
         return view('home.ad_freelancerlist')->with('students', $freelancer);
     }
     public function fdelete($id){
-        
+        //echo $id;
         $user = freelancer::find($id);
+      // print_r($user);
         $user->delete();
     	return redirect()->route('home.adfreelancerlist');
     }
@@ -314,7 +315,7 @@ function action(Request $request)
      <td>'.$row->job_desc.'</td>
      <td>'.$row->job_date.'</td>
      <td>'.$row->salary.'</td>
-     <td> <a href="/jdelete/{{'.$row->id.'}}" class="btn btn-danger">' ."Delete". '</a></td>
+     <td> <a href="/jdelete/'.$row->id.'" class="btn btn-danger">' ."Delete". '</a></td>
      </tr>';
    }
   }
@@ -373,7 +374,7 @@ function free_action(Request $request)
      <td>'.$row->email.'</td>
      <td>'.$row->phone.'</td>
      <td>'.$row->address.'</td>
-     <td> <a href="/fdelete/{{'.$row->id.'}}" class="btn btn-danger">' ."Delete". '</a></td>
+     <td> <a href="/fdelete/'.$row->id.'" class="btn btn-danger">' ."Delete". '</a></td>
      </tr>';
    }
   }
