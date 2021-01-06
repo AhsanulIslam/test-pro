@@ -55,11 +55,11 @@
 </li>
     <li><a href="{{route('home.adfreelancerlist')}}">Freelancer</a>
 	<div class="sub-menu-1">
-  	<ul>
+  	<!-- <ul> -->
    
 		  <!-- <li><a href="/">Replacement order</a></li> -->
   
-  	</ul>
+  	<!-- </ul> -->
     </div>
 	
 </li>
