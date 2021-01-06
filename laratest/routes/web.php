@@ -23,13 +23,13 @@ Route::get('/', function(){
 // Route::get('/login', 'loginController@index')->name ('login');
 // Route::post('/login', 'loginController@verify');
 // Route::get('/logout', 'logoutController@index');
-// Route::get('/register', 'registerController@index');
-// Route::post('/register', 'registerController@store');
+Route::get('/register', 'registerController@index');
+Route::post('/register', 'registerController@store');
 Route::get('/login', [loginController::class,'index']);
 Route::post('/login', [loginController::class,'verify']);
 Route::get('/logout', [logoutController::class,'index']);
-Route::get('/register', [registerController::class,'index']);
-Route::post('/register', [registerController::class,'store']);
+// Route::get('/register', [registerController::class,'index']);
+// Route::post('/register', [registerController::class,'store']);
 
 Route::group(['middleware'=>['sess']], function(){
 	Route::group(['middleware'=>['atype']], function(){
