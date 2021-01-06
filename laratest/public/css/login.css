@@ -42,7 +42,7 @@ header
 
 
 .login-box{
-  width: 400px;
+  width: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,12 +66,12 @@ header
 /* ------------------------------------------text & animation------------- */
 .text1
 {
-color:rgb(0, 0, 0);
-font-weight: 700;
-letter-spacing: 2px;
-margin-bottom:20px; 
-position:relative;
-animation: text 2.5s 1;
+  color:rgb(0, 0, 0);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom:20px; 
+  position:relative;
+  animation: text 2.5s 1;
 }
 
 
@@ -87,8 +87,9 @@ animation: text 2.5s 1;
 
   }
   85%
-  {  letter-spacing: 8px;
-   margin-top: -40px;
+  {  
+    letter-spacing: 8px;
+    margin-top: -40px;
   }
 
 }
@@ -99,7 +100,7 @@ animation: text 2.5s 1;
   letter-spacing: 5px;
   text-transform: uppercase;
   position:absolute;
-animation: htext 2.5s 1;
+  animation: htext 2.5s 1;
 }
 
 @keyframes htext 
@@ -224,19 +225,19 @@ width:auto;
   transform: scale(1.05);
 
 }
-.btn3
-{ background: rgb(0, 0, 0);
-  border:0;
-  color:rgb(255, 255, 255);
-width:auto;
-text-decoration: none;
 
+.btn3
+{ width: 100px; 
+   background: rgb(0, 0, 0);
+  border-radius: 24px;
+  color:rgb(255, 255, 255);
+ text-decoration: none;
 }
 .btn3:hover
 {
   background: rgb(255, 255, 255);
   color: #000000;
-  border-radius: 24px;
+  border-radius: 20px;
 }
 /* ---------------for button animation------------------- */
 .btn::before

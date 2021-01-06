@@ -44,7 +44,8 @@
 			 <br>
 			 <br>
 
-			 <label><a class="btn btn3" href="/login/github" >Signup with github</a></label>
+			 <label><a class="btn btn3" href="/login/github" >Signup with Github As Freelancer</a></label>
+		
 		 
 		 </div>
 		 <div style="color: red">{{session('msg')}} </div>

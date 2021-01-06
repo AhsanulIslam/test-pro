@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Http\Request;
-use App\user;
+use App\freelancer;
 use Auth;
 
 class LoginController extends Controller
@@ -58,15 +58,21 @@ class LoginController extends Controller
         $user = Socialite::driver('github')->user();
         // dd($user);
         // $user->token;
-        $data = new user;
-        
-        $data ->username = $user->nickname;
-        $data ->fname = $user->name;
-        $data ->email = $user->email;
-        $data ->password= '123';
+        $check = freelancer::where('email',$user->email)->first();
+        if($check){
+            return redirect('/home');
+        }
+        else{
+            $data = new freelancer;
+            $data ->username = $user->nickname;
+            $data ->fname = $user->name;
+            $data ->email = $user->email;
+            $data ->password= '123';
         $data->save();
  
         return redirect('/login');
+        }
+        
     }
 
     
