@@ -9,25 +9,25 @@
 		<tr>
 			<td>
 				<div class="card">
-				<span class="text-white"> Total jobs taken <br>
+				<span class="text-white"> Total jobs applied <br>
 					{{$countjob}}
 					
 				</span>
 				</div>
 			</td>
 			<td>
-				<div class="card">
+				{{-- <div class="card">
 				<span class="text-white"> Total buyers <br>
-				 	{{-- {{$countb}} --}}
+				 	{{-- {{$countb}} 
 				</span>
 				</div>
 			</td>
 			<td>
 				<div class="card">
 				<span class="text-white"> Total freelancer <br>
-					{{-- {{$countfree}} --}}
+					{{-- {{$countfree}} 
 				</span>
-				</div>
+				</div> --}}
 			</td>
 		</tr>
 	</table>

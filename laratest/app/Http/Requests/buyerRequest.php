@@ -39,7 +39,7 @@ class buyerRequest extends FormRequest
 
     public function messages(){
         return [
-            'username.required'=> "Buyer username can't be left empty....",
+            'username.required'=> "username can't be left empty....",
             'username.min'=> "username minimum 3 characters....",
             'username.unique'=> "username already taken, change you username....",
             'password.required'=> "password can't be left empty....",
