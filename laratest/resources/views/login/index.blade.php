@@ -11,11 +11,17 @@
 	<header> 
 		<div class="row">
 		<div class= text2> New!!!! Register here ------->>>></div>
-	<ul class="main-nav1">
+	<!-- <ul class="main-nav1"> -->
+		<table>
+			<tr>
+				<td><a class="btn btn3" href="/login/github" >Sign-Up With Github</a></td>
+				<td>	<a href="/register" ><input type="button" class="btn btn2" name ="register" value="Sign-Up"></a></td>
+			</tr>
+		</table>
 	
-			<li><a href="/register" ><input type="button" class="btn btn2" name ="register" value="Sign-Up"></a></li>
+	
 		
-		</ul>
+		<!-- </ul> -->
 		</div>	
 	</header> 
 	<form method="post">
@@ -44,7 +50,7 @@
 			 <br>
 			 <br>
 
-			 <label><a class="btn btn3" href="/login/github" >Signup with Github As Freelancer</a></label>
+			
 		
 		 
 		 </div>
