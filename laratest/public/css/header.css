@@ -6,7 +6,7 @@
 }
 .search
 {
-  width: 300px;
+  width: 400px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -34,7 +34,7 @@ body
 }
 .menu-bar
 {
-  background: rgba(0, 100, 0);
+  background: #000000;
   text-align: center;
 }
 .menu-bar ul
@@ -45,9 +45,9 @@ body
 }
 .menu-bar ul li
 {
-  width: 120px;
-  margin: 15px;
-  padding: 15px;
+  width: 300px;
+  margin: 10px;
+  padding: 25px;
 }
 .menu-bar ul li a
 {
@@ -58,7 +58,7 @@ body
 }
 .active, .menu-bar ul li:hover
 {
-  background: #2bab0d;
+  background: #464646;
   border-radius: 10px;
 }
 .menu-bar .fa
@@ -74,7 +74,7 @@ body
 {
   display: block;
   position: absolute;
-  background: rgb(0, 100, 0);
+  background: rgb(49, 49, 49);
   margin-top: 15px;
   margin-left: -15px;
 }
@@ -85,9 +85,9 @@ body
 }
 .menu-bar ul li:hover .sub-menu-1 ul li
 {
-  width: 150px;
-  padding: 10px;
-  border-bottom: 1px dotted #fff;
+  width: 250px;
+  padding: 20px;
+  border-bottom: 1px solid  #fff;
   background: transparent;
   border-radius: 0;
   text-align: left;
@@ -100,7 +100,7 @@ body
 }
 .menu-bar ul li:hover .sub-menu-1 ul li a:hover
 {
-  color: #b2ff00;
+  color: #d7d7e0;
 }
 
 

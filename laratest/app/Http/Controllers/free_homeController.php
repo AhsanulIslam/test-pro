@@ -93,13 +93,10 @@ class free_homeController extends Controller
       
         if($chat->save()){               // inserts in to the database using the save() method
             $results = DB::select('select * from chat where username = ? && Admin_Username = ?',[$uname, $username]);
- 
             return view('home.free_inbox_inside')->with('replytxt', $results);
         }
         else{
             echo("error buyer not inserted to database");}
-
-      
     }
     
 
