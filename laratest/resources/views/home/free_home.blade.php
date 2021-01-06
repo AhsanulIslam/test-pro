@@ -5,7 +5,7 @@
 	<br>
 
 <div align="center">
-	<table">
+	<table>
 		<tr>
 			<td>
 				<div class="card">
@@ -16,18 +16,10 @@
 				</div>
 			</td>
 			<td>
-				{{-- <div class="card">
-				<span class="text-white"> Total buyers <br>
-				 	{{-- {{$countb}} 
-				</span>
-				</div>
+			<input type="text">
 			</td>
 			<td>
-				<div class="card">
-				<span class="text-white"> Total freelancer <br>
-					{{-- {{$countfree}} 
-				</span>
-				</div> --}}
+				
 			</td>
 		</tr>
 	</table>

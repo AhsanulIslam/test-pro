@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
     <title></title>
 	<link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 	<script type="text/javascript" src="{{asset('js/jquery-3.5.1.js')}}"></script>
 	<title>Login</title>
 </head>
@@ -12,17 +13,20 @@
 		<div class="row">
 		<div class= text2> New!!!! Register here ------->>>></div>
 	<!-- <ul class="main-nav1"> -->
-		<table>
-			<tr>
-				<td><a class="btn btn3" href="/login/github" >Sign-Up With Github</a></td>
-				<td>	<a href="/register" ><input type="button" class="btn btn2" name ="register" value="Sign-Up"></a></td>
-			</tr>
-		</table>
+		<!-- <table> -->
+			<!-- <tr> -->
+				<a class="btn btn3" href="/login/github" >Sign-Up With Github</a>
+				<a href="/register" ><input type="button" class="btn btn2" name ="register" value="Sign-Up"></a>
+			<!-- </tr> -->
+		<!-- </table> -->
 	
 	
 		
 		<!-- </ul> -->
 		</div>	
+		<br>
+		<br>
+		<h1 class="freelancer"> <b> Find the perfect <br> <i>freelance</i>  <br> services for your <br> business</b> </h1>
 	</header> 
 	<form method="post">
 		<!-- @csrf -->

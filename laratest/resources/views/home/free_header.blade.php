@@ -32,10 +32,10 @@
   <ul>
     <li class="active"><a href="/free_home"></i>Home</a>
         <div class="sub-menu-1">
-            <ul>          
+            <!-- <ul>           -->
                
                  <!-- <li><a href="/logout">logout</a></li> -->
-            </ul>
+            <!-- </ul> -->
           </div>
     </li>
 	 <li><a href="{{route('free_home.joblist')}}">job lists</a></li>
@@ -48,11 +48,11 @@
 </li>
     <li><a href="{{route('free_home.adminlist')}}">Admin</a>
 	<div class="sub-menu-1">
-  	<ul>
+  	<!-- <ul> -->
    
 		  <!-- <li><a href="/">Replacement order</a></li> -->
   
-  	</ul>
+  	<!-- </ul> -->
     </div>
 	
 </li>
