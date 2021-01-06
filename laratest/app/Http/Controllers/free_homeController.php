@@ -29,7 +29,7 @@ class free_homeController extends Controller
 
     public function index(Request $req){
 
-        $count2 = freelancer::all()->count();// need to count the jobs the freelancer has taken
+        $count2 = jobapply::all()->count();// need to count the jobs the freelancer has taken
         
 
     //    print_r($count);
@@ -132,7 +132,7 @@ class free_homeController extends Controller
             $user->phone     = $req->phone;
            $user->address    = $req->address;
         $user->save();
-    	return redirect()->route('home.admininfo');
+    	return redirect()->route('free_home.freelancerinfo');
     }
 
 
